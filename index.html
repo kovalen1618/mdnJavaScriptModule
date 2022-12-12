@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Apply JavaScript example</title>
+
+    <!-- Internal JavaScript -->
+    <!-- <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            function createParagraph() {
+                const para = document.createElement('p');
+                para.textContent = 'You clicked the button!';
+                document.body.appendChild(para);
+            }
+
+            const buttons = document.querySelectorAll('button');
+
+            for (const button of buttons) {
+                button.addEventListener('click', createParagraph);
+            }
+        });
+
+    </script> -->
+
+    <!-- Defer loads the JavaScript after the HTML as errors can occur if the DOM loads before the JavaScript -->
+    <!-- An old fashioned  solution was putting the <script></script> element at the bottom of the HTML before
+    the </body> closing tag. The issue with this is that the script is completely blocked until the HTML DOM
+    has been loaded. On large sites, this can cause major performance issues - slowing down the site -->
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+
+    <button>Click me</button>
+
+</body>
+</html>
